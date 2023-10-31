@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "daee7774-7232-42b7-9192-6ef51d01bd7c",
+		"_postman_id": "d3c77a63-00cc-4aa2-8413-4a16322de95c",
 		"name": "Basket",
 		"description": "This is the API for adding products to a basket for checking out and ordering.\n\nContact Support:\n Email: cooper@postman.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24113304-daee7774-7232-42b7-9192-6ef51d01bd7c"
+		"_uid": "16340986-d3c77a63-00cc-4aa2-8413-4a16322de95c"
 	},
 	"item": [
 		{
@@ -19,7 +19,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "77b174d4-18fa-4bfe-b4d7-1f431c8e1702",
+										"id": "8fac4ce4-6418-402a-9a46-f50347229691",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -33,7 +33,7 @@
 									}
 								}
 							],
-							"id": "8c03b406-f7c4-454a-851f-d0abd994df13",
+							"id": "33559e24-8d51-4318-a09f-b3207b79e4d2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -61,7 +61,7 @@
 							},
 							"response": [
 								{
-									"id": "961854c3-583d-472f-8a86-3a1451b09315",
+									"id": "4ddb24a7-1834-4cde-8baf-745417e6c76e",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -88,6 +88,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -101,7 +102,7 @@
 									"body": "{\n    \"status\": \"Pending purchase\",\n    \"productId\": \"{{productName}}\",\n    \"orderId\": \"{{$randomInt}}\"\n}"
 								},
 								{
-									"id": "779995ab-4e36-42e1-9fcf-b88ef48aad2d",
+									"id": "e4d1e218-521d-4abc-83fe-bb52bd7a5693",
 									"name": "Basket not found",
 									"originalRequest": {
 										"method": "GET",
@@ -132,6 +133,7 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -142,7 +144,7 @@
 									"body": "{\n    \"status\": \"Basket not found\"\n}"
 								},
 								{
-									"id": "b523a537-a627-49a5-809d-f35d53287c98",
+									"id": "9ed10a45-d0b8-4c0c-8089-02a681a78049",
 									"name": "Incorrect basket state",
 									"originalRequest": {
 										"method": "GET",
@@ -173,6 +175,7 @@
 									"status": "Conflict",
 									"code": 409,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -183,7 +186,7 @@
 									"body": "{\n    \"error\": \"Incorrect state - contact support\"\n}"
 								},
 								{
-									"id": "665be42f-20ee-4367-915a-1ee705505e13",
+									"id": "475658e1-d306-4954-8b4d-498cd76aefc1",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "GET",
@@ -210,6 +213,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "text",
+									"_postman_previewtype": "html",
 									"header": [],
 									"cookie": [],
 									"body": null
@@ -217,7 +221,7 @@
 							]
 						}
 					],
-					"id": "12732e42-134a-4e7b-9b44-609907704936"
+					"id": "b9ce2e04-a8e2-4b57-a8b6-086dba2b0f67"
 				},
 				{
 					"name": "remove",
@@ -228,7 +232,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5ffead7b-fc5f-4bb6-b0da-0de013b9231b",
+										"id": "032d0a13-f8f3-4025-8af1-be2578b18cdc",
 										"exec": [
 											"pm.test(\"Status code is 204\", function () {",
 											"    pm.response.to.have.status(204);",
@@ -239,7 +243,7 @@
 									}
 								}
 							],
-							"id": "7260689d-033a-42f2-83fd-15255051f413",
+							"id": "11859996-f4da-4b08-bf68-719a08563f07",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -263,7 +267,7 @@
 							},
 							"response": [
 								{
-									"id": "b2d1f562-efb9-4ec8-a855-92290bf21c40",
+									"id": "74e689a0-7a75-4f3c-a1c6-33606cc6709e",
 									"name": "Success",
 									"originalRequest": {
 										"method": "DELETE",
@@ -291,6 +295,7 @@
 									"status": "No Content",
 									"code": 204,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -304,7 +309,7 @@
 									"body": "{\n    \"status\": \"deleted\",\n    \"productId\": \"{{productId}}\",\n    \"productName\": \"{{$randomProductName}}\"\n}"
 								},
 								{
-									"id": "633238bc-7ade-4968-87c3-dff0f89f4470",
+									"id": "2fe65eef-611c-4e0f-bb3c-2105f3981907",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "DELETE",
@@ -332,6 +337,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -347,7 +353,7 @@
 							]
 						}
 					],
-					"id": "5a779933-198c-491a-a773-53332ec11753"
+					"id": "9478e0d7-5719-459e-a329-3f0991cb6813"
 				},
 				{
 					"name": "quantity",
@@ -358,7 +364,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d59944f7-f3cc-496a-be8a-ab9649e94f5d",
+										"id": "627ebeaa-3d6e-4925-851c-aeb5c722c86d",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -372,7 +378,7 @@
 									}
 								}
 							],
-							"id": "2f7746cc-4b9c-4060-bf8a-2c3dc5fe7569",
+							"id": "53df62e3-8ad1-44d3-9dc5-9259ec67665b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -417,7 +423,7 @@
 							},
 							"response": [
 								{
-									"id": "dc42c944-e7e2-47fe-80a7-603971953a45",
+									"id": "f810cdaf-9248-4e11-a616-e7b8c62f3531",
 									"name": "Success",
 									"originalRequest": {
 										"method": "PATCH",
@@ -459,6 +465,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -472,7 +479,7 @@
 									"body": "{\n  \"items\": [\n    {\n      \"productOrderId1\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    },\n    {\n      \"productOrderId2\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    }\n  ]\n}"
 								},
 								{
-									"id": "a528e7fa-65b9-408f-a1a0-f4b3385f5baa",
+									"id": "483cfad8-a507-43a7-9fe4-5aef08b70103",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "PATCH",
@@ -514,6 +521,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -529,7 +537,7 @@
 							]
 						}
 					],
-					"id": "cf77e62d-d4b6-4a86-bd5c-8a0edcb96544"
+					"id": "0229933c-d0ce-48f1-9f77-8598fb92a58e"
 				},
 				{
 					"name": "get",
@@ -540,7 +548,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6bbe9936-8c4e-4303-a480-bb19ba306fcf",
+										"id": "699b597c-f48b-4c08-b822-66bd4b83d7b8",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -555,7 +563,7 @@
 									}
 								}
 							],
-							"id": "7dd69e80-26ca-45bd-b05c-0b1edb09edf6",
+							"id": "7b3d162d-ca87-4f19-bb1d-ddaebf7d3175",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -588,7 +596,7 @@
 							},
 							"response": [
 								{
-									"id": "f6cb8635-48c4-4f9a-96ab-5cc31b7cc196",
+									"id": "87dd8d8d-86b5-4643-bd92-eef07701cb00",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -618,6 +626,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -628,7 +637,7 @@
 									"body": "{\n  \"items\": [\n    {\n      \"productName\": \"{{$randomProductName}}\",\n      \"productOrderId\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    },\n    {\n      \"productName\": \"{{$randomProductName}}\",\n      \"productOrderId\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    },\n    {\n      \"productName\": \"{{$randomProductName}}\",\n      \"productOrderId\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    },\n    {\n      \"productName\": \"{{$randomProductName}}\",\n      \"productOrderId\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    },\n    {\n      \"productName\": \"{{$randomProductName}}\",\n      \"productOrderId\": \"{{$randomUUID}}\",\n      \"quantity\": \"{{$randomInt}}\"\n    }\n  ],\n  \"totalPrice (USD)\": \"${{$randomPrice}}\"\n}"
 								},
 								{
-									"id": "6e84f157-1e6d-49bf-ad4a-0132be94238b",
+									"id": "b2de1852-60d8-447a-863e-09a7fef88994",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "GET",
@@ -654,6 +663,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -669,7 +679,7 @@
 							]
 						}
 					],
-					"id": "9d53f7a7-5801-45e1-9b97-b9743f57a9b3"
+					"id": "ba5fbbbc-63c9-4cdc-aeed-b04fca376dc4"
 				},
 				{
 					"name": "delete",
@@ -680,7 +690,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f93b1fc9-7508-4200-8ac6-c9e7e1fcd893",
+										"id": "f98a26f2-c04c-4ba4-8f09-4603a3e6e4e1",
 										"exec": [
 											"pm.test(\"Status code is 204\", function () {",
 											"    pm.response.to.have.status(204);",
@@ -690,7 +700,7 @@
 									}
 								}
 							],
-							"id": "d1d684fe-d629-40ae-8d92-71d22aea6682",
+							"id": "7549cdb4-c764-47f6-830a-7f9f407004fd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -717,7 +727,7 @@
 							},
 							"response": [
 								{
-									"id": "b1dbe639-2055-4931-943c-d3d946cdbe89",
+									"id": "3b2b02a6-ed55-422e-b876-b788a7279f4f",
 									"name": "Delete basket",
 									"originalRequest": {
 										"method": "DELETE",
@@ -742,6 +752,7 @@
 									"status": "No Content",
 									"code": 204,
 									"_postman_previewlanguage": "plain",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Date",
@@ -784,7 +795,7 @@
 									"body": null
 								},
 								{
-									"id": "1c2b16fd-22fd-4f9b-8027-b7f709ac7bda",
+									"id": "634ae2bf-b37d-4f94-b00e-99b55351b89b",
 									"name": "Basket not found",
 									"originalRequest": {
 										"method": "DELETE",
@@ -813,6 +824,7 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -823,7 +835,7 @@
 									"body": "{\n  \"status\": \"Basket not found\"\n}"
 								},
 								{
-									"id": "befb3b03-9af5-42d9-9d0f-3da11095d9b4",
+									"id": "d6cdcb23-9024-4a2a-88d4-263857e3f1c9",
 									"name": "Incorrect basket state",
 									"originalRequest": {
 										"method": "DELETE",
@@ -852,6 +864,7 @@
 									"status": "Conflict",
 									"code": 409,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -862,7 +875,7 @@
 									"body": "{\n  \"status\": \"Application conflict. Try again, or reach out to Support.\",\n  \"errorId\": \"{{$randomUUID}}\"\n}"
 								},
 								{
-									"id": "49315c7f-20b8-423e-8bfb-b0de22c273e2",
+									"id": "61ee925b-ea45-4d39-8bcf-07fe14dacbac",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "DELETE",
@@ -887,6 +900,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -902,7 +916,7 @@
 							]
 						}
 					],
-					"id": "0d33ac9a-d936-4718-a419-9c64e2070170"
+					"id": "bf1ff1c6-1633-4088-807a-c47a56baf1ae"
 				},
 				{
 					"name": "create",
@@ -913,7 +927,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f83a8943-b7cc-4414-b505-348eae783c90",
+										"id": "db5203f1-bb4a-44c5-92f2-fbaef7a881f8",
 										"exec": [
 											"pm.test(\"Status code is 201\", function () {",
 											"    pm.response.to.have.status(201);",
@@ -927,7 +941,7 @@
 									}
 								}
 							],
-							"id": "f4f045f2-84e8-4ac9-a98e-a4b28626b2ba",
+							"id": "5dd45eb8-2aeb-4896-96a4-ed0e7a7e0f6e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -962,7 +976,7 @@
 							},
 							"response": [
 								{
-									"id": "8dcbf8e3-ddc5-42d9-be8c-4d6cbce7ed03",
+									"id": "9c23d4fe-7101-4ec6-be44-98f7883e8cf6",
 									"name": "Success",
 									"originalRequest": {
 										"method": "POST",
@@ -991,6 +1005,7 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1001,7 +1016,7 @@
 									"body": "{\n    \"status\": {\n        \"basketOwner\": \"{{$body 'response.username'}}\",\n        \"basketUserId\": \"{{$body 'response.userId'}}\",\n        \"basketDescription\": \"{{$body 'response.description'}}\"\n    }\n}\n"
 								},
 								{
-									"id": "0c4fac53-a9e4-4fe5-a860-b3bad7b88818",
+									"id": "9cc159db-7454-403e-88a7-fb147181cf9a",
 									"name": "Invalid user specified",
 									"originalRequest": {
 										"method": "POST",
@@ -1030,6 +1045,7 @@
 									"status": "Not Found",
 									"code": 404,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1040,7 +1056,7 @@
 									"body": "{\n    \"response\": {\n        \"error\": \"Invalid user specified\"\n    }\n}"
 								},
 								{
-									"id": "3751ff7f-bbb0-4934-b3ac-2f1900b1c328",
+									"id": "610154fa-2d88-4d49-9a80-31f263612512",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "POST",
@@ -1065,6 +1081,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1080,7 +1097,7 @@
 							]
 						}
 					],
-					"id": "883f43f9-e73c-4e13-984a-7d6b2f868680"
+					"id": "8f3f579b-d5dc-40a1-a8f4-794be44af932"
 				},
 				{
 					"name": "add-item",
@@ -1091,7 +1108,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f0179adc-3dfb-4988-a95e-94501aefbb71",
+										"id": "7a310e9b-09c5-42f9-aaf9-504f3cf02ac4",
 										"exec": [
 											"pm.test(\"Status code is 201\", function () {",
 											"    pm.response.to.have.status(201);",
@@ -1105,7 +1122,7 @@
 									}
 								}
 							],
-							"id": "65376495-fb58-4d4c-9202-5716c8403c2d",
+							"id": "4aadcef4-d6cc-4d9d-a1ef-6e3019560330",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1150,7 +1167,7 @@
 							},
 							"response": [
 								{
-									"id": "d162fcd5-ccc3-44b5-87b9-b2b101a4f248",
+									"id": "195bb58a-3a81-4c49-823c-86d2c34337f7",
 									"name": "Add items to a given basket",
 									"originalRequest": {
 										"method": "POST",
@@ -1193,6 +1210,7 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Date",
@@ -1247,7 +1265,7 @@
 									"body": "{\n    \"itemsAdded\": {\n        \"productName\": \"Generic Frozen Keyboard\",\n        \"quantity\": \"636\"\n    }\n}"
 								},
 								{
-									"id": "092f0b1b-2f8d-40f2-aa37-5ce12847a80f",
+									"id": "55608254-7eb5-40fc-870e-ed27d5ea297b",
 									"name": "A server error response",
 									"originalRequest": {
 										"method": "POST",
@@ -1286,6 +1304,7 @@
 									"status": "Internal Server Error",
 									"code": 500,
 									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -1301,10 +1320,10 @@
 							]
 						}
 					],
-					"id": "9ff50b79-cb14-4d9a-b9d1-d3d9804077f1"
+					"id": "62a30de5-71fe-4960-b11f-4a556b2addbf"
 				}
 			],
-			"id": "49508c15-9dd3-4352-9534-798453e04a3f"
+			"id": "b0e49448-cfe7-4cce-918d-6957d860997b"
 		}
 	],
 	"auth": {
