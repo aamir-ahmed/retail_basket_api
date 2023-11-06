@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "ac85643f-9a83-4737-84d9-7f1a143cbdc7",
+		"name": "Basket",
+		"description": "This is the API for adding products to a basket for checking out and ordering.\n\nContact Support:\n Name: Example Support\n Email: example@example.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16340986-ac85643f-9a83-4737-84d9-7f1a143cbdc7"
+	},
+	"item": [
+		{
+			"name": "basket",
+			"item": [
+				{
+					"name": "get",
+					"item": [
+						{
+							"name": "Get basket",
+							"id": "6ba3bdd3-4680-4e3c-92f4-9cfa0d80735e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/basket/get?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"basket",
+										"get"
+									],
+									"query": [
+										{
+											"description": "(Required) The ID of the basket to be returned.",
+											"key": "id",
+											"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+										}
+									]
+								},
+								"description": "Get the entire contents of a given basket."
+							},
+							"response": [
+								{
+									"id": "9fb8668d-71ef-45b4-ba88-d5e6d75d0e84",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/get?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"get"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to be returned.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 3\n    }\n  ]\n}"
+								},
+								{
+									"id": "eb4652b3-171f-4174-b5bc-aca34c447faf",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/get?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"get"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to be returned.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								},
+								{
+									"id": "fc3a154c-7ab8-42b9-b1a6-904ab3601a07",
+									"name": "Get basket",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/get?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"get"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to be returned.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "2bea8d92-fa44-4cea-b9c1-61032923b2c0"
+				},
+				{
+					"name": "submit-to-order",
+					"item": [
+						{
+							"name": "Submit to order",
+							"id": "40a3775c-3321-484e-bfa2-cc985403da8f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/basket/submit-to-order?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"basket",
+										"submit-to-order"
+									],
+									"query": [
+										{
+											"description": "(Required) The ID of the basket to purchase.",
+											"key": "id",
+											"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+										}
+									]
+								},
+								"description": "Submit basket to create an order and finalize purchase."
+							},
+							"response": [
+								{
+									"id": "9e9ae32f-b9d7-4a37-8320-79f0e705228d",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/submit-to-order?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"submit-to-order"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to purchase.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"success\",\n  \"order_id\": \"1550861260442-MTU1MDg2MTI2MDQ0Mg==\"\n}"
+								},
+								{
+									"id": "eb0f3f06-f257-4127-a943-99d3f5758a0f",
+									"name": "Basket not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/submit-to-order?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"submit-to-order"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to purchase.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"failed\",\n  \"order_id\": \"Basket does not exist\"\n}"
+								},
+								{
+									"id": "c729051a-702a-4378-a2e1-accd343a59e7",
+									"name": "Incorrect basket state",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/submit-to-order?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"submit-to-order"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to purchase.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"failed\",\n  \"order_id\": \"Basket no longer in open state\"\n}"
+								},
+								{
+									"id": "e42635aa-408c-4714-a519-46b08e862954",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/submit-to-order?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"submit-to-order"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to purchase.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "fe639734-a29a-4e99-91ff-de0973f00cbb"
+				},
+				{
+					"name": "add-item",
+					"item": [
+						{
+							"name": "Add items to a given basket",
+							"id": "8e327090-e794-4fb0-b8f1-1b6cd8f1b7ba",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json "
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 2\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 1\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/basket/add-item?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"basket",
+										"add-item"
+									],
+									"query": [
+										{
+											"description": "(Required) The ID of the basket to modify.",
+											"key": "id",
+											"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+										}
+									]
+								},
+								"description": "Add items to basket"
+							},
+							"response": [
+								{
+									"id": "62e52721-43ce-482e-975b-554f093329c6",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json "
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 2\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 1\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/basket/add-item?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"add-item"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to modify.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json "
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"success\"\n}"
+								},
+								{
+									"id": "67b5b85e-65c2-4f15-83ca-d52d69e55541",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 2\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 1\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/basket/add-item?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"add-item"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to modify.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "5f2535c8-8fe8-4dd4-a41a-6ea879397a9d"
+				},
+				{
+					"name": "quantity",
+					"item": [
+						{
+							"name": "Change quantity",
+							"id": "d75ab581-95a3-44bd-ba52-30da49bad498",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 3\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/basket/quantity?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"basket",
+										"quantity"
+									],
+									"query": [
+										{
+											"description": "(Required) The ID of the basket to modify.",
+											"key": "id",
+											"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+										}
+									]
+								},
+								"description": "Change the quantity of items/an item for a given basket."
+							},
+							"response": [
+								{
+									"id": "82293b64-2dc0-4bac-b2de-87b4ba6eff1d",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 3\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/basket/quantity?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"quantity"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to modify.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"success\"\n}"
+								},
+								{
+									"id": "32d6b639-a2cf-4b79-bad0-a04848705024",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"items\": [\n    {\n      \"id\": \"XYZ-JEAN-123\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"ABC-TOP-789\",\n      \"quantity\": 3\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/basket/quantity?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"quantity"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to modify.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "98941cde-eac2-4f4d-9397-d4ae0281d3ba"
+				},
+				{
+					"name": "remove",
+					"item": [
+						{
+							"name": "Remove",
+							"id": "4a7fc143-1326-422e-bdea-0ec425eb0d8f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/basket/remove?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"basket",
+										"remove"
+									],
+									"query": [
+										{
+											"description": "(Required) The ID of the basket to modify.",
+											"key": "id",
+											"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+										}
+									]
+								},
+								"description": "Remove item(s) from a given basket."
+							},
+							"response": [
+								{
+									"id": "c50d6285-de4c-409c-b5a1-000251154828",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/remove?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"remove"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to modify.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"success\"\n}"
+								},
+								{
+									"id": "451a39ae-3824-454b-ad35-df2c63b56583",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: basic",
+												"key": "Authorization",
+												"value": "Basic <credentials>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/basket/remove?id=ebceac76-e4a2-409b-8fc4-17709947e6a9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"basket",
+												"remove"
+											],
+											"query": [
+												{
+													"description": "(Required) The ID of the basket to modify.",
+													"key": "id",
+													"value": "ebceac76-e4a2-409b-8fc4-17709947e6a9"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						}
+					],
+					"id": "cb568354-cf0d-48f4-870e-4f12a23b8556"
+				}
+			],
+			"id": "3bce0997-5617-4356-bc97-85c50f8d4f0e"
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "{{basicAuthUsername}}",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{basicAuthPassword}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "82e2a5dd-e874-4f6a-9ab3-cf48bd29cbfa",
+			"key": "baseUrl",
+			"value": "https://example.com"
+		}
+	]
+}
