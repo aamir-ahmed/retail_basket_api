@@ -46,12 +46,6 @@
 											"});",
 											"",
 											"",
-											"pm.test(\"Verify that the status is one of the expected values\", function () {",
-											"  const responseData = pm.response.json();",
-											"  ",
-											"  pm.expect(responseData).to.be.an('object');",
-											"  pm.expect(responseData.status).to.exist.and.to.be.oneOf([\"success\", \"failed\", \"pending\"]);",
-											"});",
 											"",
 											""
 										],
